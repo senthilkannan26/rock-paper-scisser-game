@@ -1,0 +1,103 @@
+:root {
+  --primary-color: rgba(27, 30, 228, 0.61);
+  --light-color: #ddd;
+  --dark-color: #333;
+  --win-color: rgb(43, 235, 18);
+  --loss-color: rgba(196, 14, 14, 0.705);
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: sans-serif, Arial, "Helvetica Neue", Helvetica;
+  color: #333;
+}
+
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 2em 2em;
+  text-align: center;
+}
+
+.wrap h1,
+.resetbtn,
+.results,
+h2 {
+  margin-bottom: 1em;
+}
+
+.resetbtn {
+  display: none;
+  padding: 0.4em 1.5em;
+  background-color: var(--primary-color);
+  border: none;
+  offset: none;
+  color: whitesmoke;
+  border-radius: 4px;
+  margin-top: 1em;
+}
+
+.resetbtn:hover,
+.resetbtn:focus {
+  background-color: rgba(9, 5, 240, 0.808);
+  color: #fff;
+}
+
+.results {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  color: var(--dark-color);
+}
+
+.results p {
+  margin-top: 1em;
+  font-size: 1.3em;
+  color: #fff;
+}
+.results p:first-child {
+  padding: 1em;
+  background-color: var(--primary-color);
+}
+
+.results p:last-child {
+  padding: 1em;
+  background-color: var(--dark-color);
+}
+.choices {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 1em;
+}
+
+.choice:hover {
+  color: var(--primary-color);
+}
+
+.player {
+  font-size: 2.5em;
+  margin-bottom: 0.3em;
+  color: var(--win-color);
+}
+
+.computer {
+  font-size: 2.5em;
+  margin-bottom: 0.3em;
+  color: var(--loss-color);
+}
+
+@media (max-width: 520px) {
+  .choices {
+    font-size: 0.7em;
+  }
+}
+
+@media (max-width: 370px) {
+  .choices {
+    font-size: 0.5em;
+  }
+}

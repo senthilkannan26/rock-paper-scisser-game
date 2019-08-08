@@ -1,0 +1,50 @@
+:root {
+  --animation-time: 1s;
+}
+.model {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  width: 100%;
+  height: 100%;
+}
+
+.model-content {
+  border-radius: 30px;
+  margin: 16% auto;
+  background-color: #fff;
+  width: 290px;
+  text-align: center;
+  padding: 1.5em;
+  box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.4), 0 8px 15px 0 rgba(0, 0, 0, 0.8);
+  animation-name: anim;
+  animation-duration: var(--animation-time);
+}
+
+.model-content p {
+  font-size: 1.5em;
+  margin-top: 0.3em;
+}
+
+@keyframes anim {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@media (max-width: 500px) {
+  .model-content {
+    margin: 10% auto;
+    width: 260px;
+    padding: 1em;
+  }
+  .model-content p {
+    font-size: 1.2em;
+    margin-top: 0.2em;
+  }
+}
